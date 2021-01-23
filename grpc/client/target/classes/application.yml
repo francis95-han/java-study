@@ -1,0 +1,11 @@
+server:
+  port: 8082
+
+app:
+  grpc:
+    client:
+      enabled: true
+      services:
+        test: #与GRpcService中的value对应
+          host: localhost # 远程主机地址
+          port: 50051 # 远程端口号，不写默认50051

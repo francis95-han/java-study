@@ -1,0 +1,24 @@
+spring:
+  redis:
+    host: 192.168.226.130
+#    host: 127.0.0.1
+    password: gj5846gj
+    database: 0
+    loginValidTime: 60
+
+  datasource:
+   url: jdbc:mysql://192.168.226.130:3306/test?characterEncoding=utf8&useSSL=false
+   username: root
+   password: gj5846gj
+  jpa:
+    hibernate:
+      ddl-auto: update
+  devtools:
+    restart:
+      trigger-file: .trigger
+logging:
+  file: ${user.dir}/logs/applet.${HOST:127.0.0.1}.${server.port:8080}
+server:
+  tomcat:
+    accesslog:
+      prefix: access.${HOST:127.0.0.1}.${server.port:8080}
